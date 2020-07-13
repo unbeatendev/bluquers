@@ -1,0 +1,308 @@
+.portfolio {
+    position: relative;
+    min-height: 75rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: 37.5em) {
+        // phone
+        min-height: 70rem;
+    }
+
+    .container {
+        display: flex;
+        width: 95%;
+        height: 100vh;
+        margin: 0 auto;
+        position: relative;
+        top: 0rem;
+        justify-content: space-between;
+
+        .port-container {
+            width: 40rem;
+            top: 30%;
+            position: relative;
+            overflow: hidden;
+            left: 5%;
+            height: 30rem;
+            margin: 1rem 1rem 2rem 0rem;
+
+
+            &:hover {
+                span {
+                    transform: translateX(1rem);
+                    transition: all 1s;
+
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $after;
+                top: -2rem;
+                right: 10rem;
+                z-index: -1;
+                transition: all 1s;
+            }
+
+
+        }
+
+        .gallery {
+            height: 100%;
+            width: 700px;
+            overflow: hidden;
+            position: relative;
+
+            .gallery-wrapper {
+                height: 600px;
+                width: 80%;
+                background: #f7f7f7;
+                margin: 0 auto;
+                line-height: 80%;
+                border-radius: 20px;
+                margin-bottom: 5rem;
+                margin-top: 5rem;
+                box-shadow: $about;
+                position: relative;
+                overflow: hidden;
+
+
+                .img {
+                    position: absolute;
+                    height: 600px;
+                    width: 100%;
+
+                    video {
+                        position: absolute;
+                        width: 100%;
+                        border-radius: 20px;
+                        transition: all 1s;
+
+
+                    }
+
+                    img {
+                        position: absolute;
+                        width: 100%;
+                    }
+
+                }
+
+                .img-text {
+                    margin-left: 3rem;
+                    position: absolute;
+                    width: 40rem;
+                    bottom: 0;
+                    padding-bottom: 5rem;
+
+                    span {
+                        color: $after;
+                    }
+
+                    a {
+                        color: $about;
+                        font-weight: medium;
+                        letter-spacing: 1px;
+                        font-size: 15px;
+                        overflow: hidden;
+                        transition: all 1s;
+
+
+                    }
+                }
+            }
+
+            .slider {
+                position: absolute;
+                height: 60px;
+                width: 200px;
+                justify-content: space-between;
+                align-items: center;
+                transform: rotate(90deg);
+                background: #f7f7f7;
+                display: flex;
+                top: 20%;
+                right: -9%;
+                margin: 0 auto;
+                padding: 2rem;
+                outline: none;
+
+                button {
+                    padding: 1rem;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    background: none;
+
+                    &:nth-of-type(2) {
+                        margin-right: 0;
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 90.25em) {
+    .gallery {
+        height: 800px;
+        width: 700px;
+        overflow: hidden;
+        position: relative;
+
+        .gallery-wrapper {
+            height: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 76.25em) {
+    .portfolio .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+
+        .port-container {
+            top: 0%;
+            text-align: center;
+            width: 60rem;
+            margin: 0 auto;
+            left: 0;
+        }
+
+        .gallery {
+            height: 100vh;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 50.25em) {
+
+    .portfolio .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+
+        .port-container {
+            top: 10rem;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
+
+        }
+
+        .gallery {
+            height: 90vh;
+            width: 100%;
+
+            .gallery-wrapper {
+                height: 450px;
+
+                video {
+                    z-index: 3;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+@media only screen and (max-width: 28.25em) {
+    .portfolio .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+
+        .port-container {
+            top: 10rem;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
+
+        }
+
+        .gallery {
+            height: 90vh;
+            width: 100%;
+            margin-top: 4rem;
+
+            .gallery-wrapper {
+                height: 400px;
+
+                video {
+                    z-index: 3;
+                }
+
+                .img-text {
+                    width: 90%;
+
+                    h1 {
+                        line-height: 20px;
+                    }
+
+                    a {
+                        font-size: 10px;
+                    }
+
+                    p {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .slider {
+                position: absolute;
+                height: 60px;
+                width: 150px;
+                justify-content: space-between;
+                align-items: center;
+                transform: rotate(90deg);
+                background: #f7f7f7;
+                display: flex;
+                top: 20%;
+                right: -1%;
+                margin: 0 auto;
+                padding: 2rem;
+                outline: none;
+                z-index: 3;
+
+                button {
+                    padding: 1rem;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    background: none;
+
+                    &:nth-of-type(2) {
+                        margin-right: 0;
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
+    }
+}

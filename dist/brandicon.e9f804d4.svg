@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55.697" height="75.786" viewBox="0 0 55.697 75.786">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="brandicon" transform="translate(-316 -732)">
+    <path id="Rectangle_1" data-name="Rectangle 1" class="cls-1" d="M17.067,0h7.768A17.067,17.067,0,0,1,41.9,17.067v0A17.067,17.067,0,0,1,24.835,34.134H0a0,0,0,0,1,0,0V17.067A17.067,17.067,0,0,1,17.067,0Z" transform="translate(316 732)"/>
+    <path id="Rectangle_2" data-name="Rectangle 2" class="cls-1" d="M0,0H38.716A16.981,16.981,0,0,1,55.7,16.981v0A16.981,16.981,0,0,1,38.716,33.962H16.981A16.981,16.981,0,0,1,0,16.981V0A0,0,0,0,1,0,0Z" transform="translate(316 773.824)"/>
+  </g>
+</svg>

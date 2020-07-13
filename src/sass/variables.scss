@@ -1,0 +1,333 @@
+$background: linear-gradient(90deg, #020079, rgba(39, 16, 102, 0) 55%, rgba(39, 16, 102, 0) 70%, #020079);
+$about-opacity: #301c57;
+$teamColor: #131F4D;
+$navback: linear-gradient(180deg, #1D7CF8 20%, #5E00D8 80%, );
+$primary: linear-gradient(90deg, #1D7CF8 -20%, #5E00D8 120%);
+$secondary: linear-gradient(180deg, #A91DF8, #5E00D8);
+$contactBtn: linear-gradient(120deg, #131F4D, #500098, #131F4D, #6f00ff, #131F4D);
+$explore-back: #c0c0c0;
+$cubicSnap: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+$snap: cubic-bezier(0.08, -0.95, 0.7, 1.5);
+$showShadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+$aboutshadow: 3px 5px 25px #9c9c9ca6;
+$black: #000000;
+$white: #ffffff;
+$after: #d800bb;
+$about: #5E00D8;
+
+$tertiary: linear-gradient(180deg, #1DC5F8, #5E00D8);
+$textOpacity: .7;
+$buttonColor: #ffffff;
+
+
+
+@font-face {
+    font-family: 'Metropolis-Bold';
+    src: url("../fonts/Metropolis-Bold_0.otf") format("woff"), url("../fonts/Metropolis-Bold_0.otf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis-Medium';
+    src: url("../fonts/Metropolis-Medium_0.otf") format("woff"), url("../fonts/Metropolis-Medium_0.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis-Regular';
+    src: url("../fonts/Metropolis-Regular_0.otf") format("woff"), url("../fonts/Metropolis-Regular_0.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexaRustSans-Black_0';
+    src: url("../fonts/NexaRustSans-Black_0.otf") format("woff"), url("../fonts/NexaRustSans-Black_0.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+$primary-font: 'Metropolis-Regular',
+sans-serif;
+$secondary-font: 'Metropolis-Medium',
+sans-serif;
+$tertiary-font: 'Metropolis-Bold',
+sans-serif;
+$textcolor: #1D7CF8;
+$headingFont: 'NexaRustSans-Black_0',
+'san-sarif';
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    list-style: none;
+    text-decoration: none;
+    // border: solid 2px red;
+}
+
+
+html {
+    font-size: 62.5%; // 10px
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (max-width: 62.5em) {
+        // tab-land
+        font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        // tab-port
+        font-size: 54%;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        // phone
+        font-size: 51%;
+    }
+
+    @media only screen and (min-width: 112.5em) {
+        // big desktop
+        font-size: 75%; // 1rem = 12px, 12/16 = 75
+    }
+
+}
+
+
+body {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    //    cursor: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (min-width: 20em) {
+        // big desktop
+        overflow-x: hidden;
+    }
+}
+
+
+body::-webkit-scrollbar  {
+    width: 1.5rem;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar-track {
+    background: $buttonColor;
+    border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #7810FF;
+    border-radius: 30px;
+}
+
+body::-webkit-scrollbar-track-piece {
+    background: $about-opacity;
+}
+
+.heading-2 {
+    font-size: 4rem;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.heading-3 {
+    font-size: 4rem;
+    text-transform: capitalize;
+    letter-spacing: -.5px;
+    line-height: 4rem;
+    font-family: $tertiary-font;
+}
+
+.heading-4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.heading-5 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.heading-1 {
+    font-size: 1.5rem;
+    text-transform: inherit;
+    letter-spacing: .5px;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.paragraph {
+    font-size: 1.5rem;
+    color: $secondary;
+}
+
+.pri-color {
+    color: $white;
+}
+
+.sec-color {
+    color: $black;
+}
+
+.mb-l {
+    margin-bottom: 5rem;
+}
+
+.mb-m {
+    margin-bottom: 3rem;
+}
+
+.mb-s {
+    margin-bottom: 1.3rem;
+}
+
+.mt-s {
+    margin-top: 1rem;
+}
+
+.mt-m {
+    margin-top: 3rem;
+}
+
+.mb-xs {
+    margin-bottom: .5rem;
+}
+
+.heading-pri {
+    font-family: $headingFont;
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    letter-spacing: -.5px;
+    line-height: 3rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.heading-sec {
+    font-family: $headingFont;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    letter-spacing: -.5px;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.navfonts{
+    font-family: $headingFont;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    letter-spacing: -.5px;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.heading-paragraph {
+    font-size: 1.5rem;
+    text-transform: inherit;
+    letter-spacing: .5px;
+    font-weight: 500;
+    line-height: 2rem;
+    width: 45rem;
+    margin-bottom: 4rem;
+}
+
+.heading-6{
+    font-size: 1.3rem;
+    text-transform: inherit;
+    letter-spacing: .5px;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.cta {
+    background-color: $after;
+    padding: 2rem 5rem;
+    text-decoration: none;
+    color: $white;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: $secondary-font;
+    letter-spacing: 3px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        border: 1.5px solid $white;
+        color: $white;
+    }
+}
+
+.cta-1 {
+    background-color: $after;
+    padding: 2rem 5rem;
+    text-decoration: none;
+    color: $white;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: $secondary-font;
+    letter-spacing: 3px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        border: 1.5px solid $black;
+        color: $black;
+    }
+}
+
+.cta-2 {
+    background-color: $about;
+    padding: 2rem 5rem;
+    text-decoration: none;
+    color: $white;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: $secondary-font;
+    letter-spacing: 3px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        border: 1.5px solid $black;
+        color: $black;
+    }
+}
+
+.testimonial-5 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
